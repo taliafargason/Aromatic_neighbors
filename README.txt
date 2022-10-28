@@ -1,3 +1,7 @@
+-------BEFORE BEGINNING-----
+Generate lists of proteins containing RS repeats of various lengths
+1) modify BEFORE_BEGINNING_construct_RS_RRM_reports.py to desired domain length
+2) run this script.  Currently the default constructs a list of proteins containing 4-mer tetrapeptides.  Comments will need to be modified to look for longer/shorter repeats.
 -------STEPS 0 and 1-------
 
 This section creates a list of RRM domain sequences and preliminary analysis of the overall sequence traits.
