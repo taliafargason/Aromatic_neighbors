@@ -32,7 +32,6 @@ name_list=[]
 count_list=[]
 assessment1 = []
 assessment2 = []
-#search_motif=['ERER', 'RERE', 'DRER', 'ERDR', 'EKDR', 'DKDK','KDKD', 'ERDK']
 for i in range(len(seq)):
     for j in range(len(search_motif)):
         if (search_motif[j] in seq[i].seq) and (seq[i].id.split('|')[1] not in name_list):
