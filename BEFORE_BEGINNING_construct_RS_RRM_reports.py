@@ -1,12 +1,3 @@
-#I want the following sets of numbers:
-    #1) number proteins that don't have RS or RRM that do and don't phase separate
-    #2) number proteins that have RS not RRM that do and don't phase separate
-    #3) number of proteins that have RRM not RS that do and don't phase separate
-    #4) number of proteins that have RS and RRM that do and don't phase separate
-    #some kind of ven diagram?
-#also want the following information:
-    #which mlos are enriched in RS containing proteins
-
 from Bio import SeqIO
 import re
 inputfile='reviewed_only_organism9606_existence1_fragmentfalse_reviewedtrue_2022.08.17.fasta'
@@ -15,16 +6,15 @@ for a in ['S']:
     for b in ['R']:
         for c in ['S']:
             for d in ['R']:
-               for e in ['S']:
-                    for f in ['R']:
-                        for g in ['S']:
-                            for h in ['R']:         
-                               # if a+b+c+d+e+f+g+h not in search_motif:
-                                    if a+b+c+d+e+f+g not in search_motif:
-                                        search_motif.append(a+b+c+d+e+f+g)
-                                    #search_motif.append(a+b)
-                                    if b+a+d+c+f+e+h not in search_motif:
-                                        search_motif.append(b+a+d+c+f+e+h)
+              # for e in ['S']:
+               #     for f in ['R']:
+               #         for g in ['S']:
+                #            for h in ['R']:      #comment these back in to look for longer repeats!   
+                                    if a+b+c+d not in search_motif:#add e-h to look for longer repeats!
+                                        search_motif.append(a+b+c+d)#add e-h to look for longer repeats!
+                                    
+                                    if b+a+d+c not in search_motif:#add e-h to look for longer repeats!
+                                        search_motif.append(b+a+d+c)#add e-h to look for longer repeats!
 phase_list=[]
 rrmlist = open("proteins_w_rrm_domains.txt","r")
 RRMlist = [re.split('\s+',line)[0] for line in rrmlist]
