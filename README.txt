@@ -31,8 +31,7 @@ level.
 		i.	Primary download at the top of the page
 	c.	http://bio-comp.org.cn/llpsdb/download.php 
 		i.	Natural proteins, protein(s), and protein + RNA
-3)	This was used to construct the following lists that are read in separately in this (admittedly 
-inefficient!) portion of the script:
+3)	This was used to construct the following lists that are read in separately in this portion of the script:
 "Dr_Zhang_phase_separate.txt"
 "phasepdb2_MLOhtp.txt"
 "combo.txt"
